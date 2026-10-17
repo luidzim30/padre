@@ -1,0 +1,183 @@
+Quero que você crie APENAS uma nova página para o botão ENSEÑANZAS DE ALTO CONTROL, que já existe no menu superior do meu site FRECUENCIA DIVINA 7.
+
+Quando o visitante clicar nesse botão, deverá abrir a nova página.
+
+IMPORTANTE: Não modifique a página inicial, os outros botões ou as páginas existentes.
+
+1. DESIGN DA PÁGINA
+
+Manter o mesmo estilo visual premium do meu site:
+
+Fundo azul-marinho escuro.
+
+Detalhes dourados elegantes.
+
+Tipografia sofisticada.
+
+Animações suaves.
+
+Design responsivo para celular e computador.
+
+Utilize a imagem que estou enviando como imagem principal desta página, em grande destaque, sem distorcer ou modificar seu conteúdo.
+
+Todo o texto da página deve estar em espanhol.
+
+2. TÍTULO PRINCIPAL
+
+ENSEÑANZAS DE ALTO CONTROL
+
+Subtítulo:
+
+"Descubre una nueva perspectiva sobre el poder de tu mente, tu conciencia y tu capacidad de transformación."
+
+Texto:
+
+"Existen conocimientos que nos invitan a mirar más allá de lo cotidiano y comprender con mayor profundidad nuestra propia realidad.
+
+En Enseñanzas de Alto Control exploraremos ideas, prácticas y reflexiones relacionadas con el autoconocimiento, la disciplina interior y el desarrollo de una conciencia más profunda.
+
+Este espacio está pensado para quienes desean aprender, cuestionar sus límites y descubrir nuevas herramientas para su crecimiento personal."
+
+3. SEÇÃO DE APRESENTAÇÃO
+
+Título:
+
+UN CONOCIMIENTO QUE COMIENZA DESDE TU INTERIOR
+
+Texto:
+
+"El verdadero crecimiento comienza cuando decidimos conocernos mejor.
+
+A través de estas enseñanzas, exploraremos diferentes formas de fortalecer nuestra atención, desarrollar hábitos conscientes y comprender cómo nuestros pensamientos y decisiones influyen en nuestra experiencia cotidiana.
+
+Cada paso representa una oportunidad para ampliar nuestra perspectiva y construir una relación más consciente con nosotros mismos."
+
+Criar três cartões elegantes:
+
+AUTOCONOCIMIENTO
+
+"Explora nuevas perspectivas para comprender mejor tus pensamientos, emociones y decisiones."
+
+DISCIPLINA INTERIOR
+
+"Descubre la importancia de la constancia, la atención y los hábitos conscientes."
+
+DESARROLLO PERSONAL
+
+"Abre un espacio para aprender, reflexionar y avanzar en tu propio proceso."
+
+4. SEÇÃO PRINCIPAL — DEIXE SEU E-MAIL
+
+Esta é a parte MAIS IMPORTANTE da página.
+
+Criar uma área de destaque com fundo escuro, bordas douradas, brilho suave e aparência exclusiva.
+
+Título:
+
+¿QUIERES RECIBIR MÁS INFORMACIÓN?
+
+Subtítulo:
+
+"Déjanos tu correo electrónico y nos pondremos en contacto contigo."
+
+Texto:
+
+"Si deseas conocer más sobre Enseñanzas de Alto Control, deja tu dirección de correo electrónico en el siguiente espacio.
+
+Nuestro equipo recibirá tu solicitud y podrá ponerse en contacto contigo para compartir más información sobre esta experiencia y los próximos pasos."
+
+Criar um campo de formulário com:
+
+Tu correo electrónico
+
+Placeholder:
+
+"Escribe tu correo electrónico aquí"
+
+Abaixo, criar um botão grande, dourado e elegante:
+
+QUIERO RECIBIR INFORMACIÓN
+
+5. FUNCIONAMENTO REAL DO FORMULÁRIO
+
+Quando o visitante digitar seu e-mail e clicar em "QUIERO RECIBIR INFORMACIÓN", o sistema deverá:
+
+Verificar se o e-mail informado é válido.
+
+Enviar automaticamente a solicitação para o nosso e-mail oficial: frequenciadivina007@gmail.com.
+
+Incluir na mensagem o e-mail digitado pelo visitante.
+
+Incluir o assunto: Nuevo interesado — Enseñanzas de Alto Control.
+
+Identificar que o contato veio da página Enseñanzas de Alto Control.
+
+Mostrar uma mensagem de sucesso somente após o envio real ter sido confirmado.
+
+Mensagem de sucesso em espanhol:
+
+¡Hemos recibido tu solicitud!
+
+"Gracias por tu interés. Nos pondremos en contacto contigo a través del correo electrónico que nos has proporcionado."
+
+IMPORTANTE SOBRE A IMPLEMENTAÇÃO:
+
+Quero um envio REAL e automático, sem abrir Gmail, Outlook ou outro aplicativo de e-mail do visitante.
+
+Implemente o formulário usando uma rota de API segura no servidor e um serviço de envio de e-mails, como Resend, ou outra integração compatível com o projeto.
+
+Configure o destinatário como:
+
+frequenciadivina007@gmail.com
+
+Utilize variáveis de ambiente para as credenciais e não exponha chaves no código do navegador.
+
+Se o serviço exigir autenticação de domínio remetente, deixe a integração preparada e informe quais configurações precisam ser realizadas.
+
+Não simule envios nem exiba mensagens falsas de sucesso.
+
+Adicionar proteção básica contra spam, validação dos dados e tratamento de erros.
+
+Incluir uma mensagem de consentimento informando que o e-mail será utilizado para responder à solicitação.
+
+6. MENSAGEM FINAL
+
+Título:
+
+EL PRIMER PASO COMIENZA CON TU DECISIÓN
+
+Texto:
+
+"Todo aprendizaje comienza con la curiosidad y la voluntad de descubrir algo nuevo.
+
+Si sientes que estas enseñanzas pueden formar parte de tu camino, deja tu correo electrónico y estaremos encantados de compartir contigo más información."
+
+7. REGRAS FINAIS
+
+Criar somente a página ENSEÑANZAS DE ALTO CONTROL.
+
+Conectar essa página ao botão correspondente do menu existente.
+
+Não modificar a página de Consultoría Individual.
+
+Não alterar a página inicial.
+
+Não modificar o botão Acelerador de Abundancia.
+
+Utilizar a imagem enviada.
+
+Não criar pagamentos ou agendamentos.
+
+Manter todo o conteúdo em espanhol.
+
+Criar um formulário funcional para captar e-mails.
+
+Enviar as solicitações para frequenciadivina007@gmail.com.
+
+Garantir excelente funcionamento no celular.
+
+Manter a identidade visual FRECUENCIA DIVINA 7.
+
+RESULTADO ESPERADO:
+
+Uma página premium, misteriosa e elegante, dedicada às Enseñanzas de Alto Control, com a imagem enviada em destaque, textos explicativos e um formulário no qual o visitante digita seu e-mail e clica em um botão para que a solicitação seja enviada automaticamente ao nosso e-mail oficial.
