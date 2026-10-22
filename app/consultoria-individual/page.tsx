@@ -1,12 +1,12 @@
 'use client'
 
-import { useState } from 'react'
+import { Suspense, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { ArrowLeft, ArrowUpRight, CalendarDays, Check, Copy, Mail, MessageCircle } from 'lucide-react'
 
 const email = 'frequenciadivina007@gmail.com'
 
-export default function ConsultoriaIndividualPage() {
+function ConsultoriaIndividualContent() {
   const searchParams = useSearchParams()
   const isEnglish = searchParams.get('lang') === 'en'
   const [copied, setCopied] = useState(false)
@@ -63,3 +63,12 @@ export default function ConsultoriaIndividualPage() {
 function Step({ icon, number, title, text }: { icon: React.ReactNode; number: string; title: string; text: string }) {
   return <article className="consultoria-step"><span className="step-icon">{icon}</span><span className="step-number">{number}</span><h3>{title}</h3><p>{text}</p><Check className="step-check" size={16} /></article>
 }
+
+export default function ConsultoriaIndividualPage() {
+  return (
+    <Suspense fallback={<main className="consultoria-page" aria-busy="true" />}>
+      <ConsultoriaIndividualContent />
+    </Suspense>
+  )
+}
+
