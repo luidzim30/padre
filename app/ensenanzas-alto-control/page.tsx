@@ -36,21 +36,21 @@ export default function EnseñanzasAltoControlPage() {
     <main className="control-page">
       <header className="site-header control-header">
         <a className="brand" href="/" aria-label="Frecuencia Divina 7, inicio"><span className="brand-mark">✦</span><span>FRECUENCIA<br /><em>DIVINA 7</em></span></a>
-        <a className="control-back" href="/">{isEnglish ? 'Back to home' : 'Volver al inicio'} <ArrowRight /></a>
+        <a className="control-back" href={isEnglish ? '/?lang=en' : '/'}>{isEnglish ? 'Back to home' : 'Volver al inicio'} <ArrowRight /></a>
       </header>
 
       <section className="purchase-welcome section-wrap" aria-labelledby="purchase-welcome-title">
-        <p className="section-kicker">Tu acceso está confirmado</p>
-        <h2 id="purchase-welcome-title">¡FELICIDADES!<br /><i>ACABAS DE ADQUIRIRLO</i></h2>
-        <p>Ahora solo tienes que seguir los pasos que aparecen a continuación.</p>
+        <p className="section-kicker">{isEnglish ? 'Your access is confirmed' : 'Tu acceso está confirmado'}</p>
+        <h2 id="purchase-welcome-title">{isEnglish ? <>CONGRATULATIONS!<br /><i>YOU HAVE JUST ACQUIRED IT</i></> : <>¡FELICIDADES!<br /><i>ACABAS DE ADQUIRIRLO</i></>}</h2>
+        <p>{isEnglish ? 'Now simply follow the steps below.' : 'Ahora solo tienes que seguir los pasos que aparecen a continuación.'}</p>
       </section>
 
       <section className="control-hero section-wrap">
         <div className="control-hero-copy">
           <p className="eyebrow">{isEnglish ? 'A space to expand your perspective' : 'Un espacio para expandir tu mirada'}</p>
-          <h1>ENSEÑANZAS<br /><i>DE ALTO CONTROL</i></h1>
-          <p className="control-subtitle">Descubre una nueva perspectiva sobre el poder de tu mente, tu conciencia y tu capacidad de transformación.</p>
-          <p>Existen conocimientos que nos invitan a mirar más allá de lo cotidiano y comprender con mayor profundidad nuestra propia realidad.</p>
+          <h1>{isEnglish ? <>HIGH-CONTROL<br /><i>TEACHINGS</i></> : <>ENSEÑANZAS<br /><i>DE ALTO CONTROL</i></>}</h1>
+          <p className="control-subtitle">{isEnglish ? 'Discover a new perspective on the power of your mind, your awareness, and your ability to transform.' : 'Descubre una nueva perspectiva sobre el poder de tu mente, tu conciencia y tu capacidad de transformación.'}</p>
+          <p>{isEnglish ? 'Some teachings invite us to look beyond the everyday and understand our own reality more deeply.' : 'Existen conocimientos que nos invitan a mirar más allá de lo cotidiano y comprender con mayor profundidad nuestra propia realidad.'}</p>
         </div>
         <div className="control-hero-image"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Encinamientos%20de%20Alto%20Control-k8cLVs985W1TTLEOd8A0Luk2dZxjw7.png" alt="Cerebro iluminado con energía dorada y azul" /></div>
       </section>

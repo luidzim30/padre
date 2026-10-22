@@ -21,21 +21,21 @@ export default function ConsultoriaIndividualPage() {
     <main className="consultoria-page">
       <header className="consultoria-header">
         <a className="consultoria-brand" href="/" aria-label="Volver al inicio"><span>✦</span><b>FRECUENCIA<br /><i>DIVINA 7</i></b></a>
-        <a className="back-home" href="/"><ArrowLeft size={15} /> {isEnglish ? 'Back to home' : 'Volver al inicio'}</a>
+        <a className="back-home" href={isEnglish ? '/?lang=en' : '/'}><ArrowLeft size={15} /> {isEnglish ? 'Back to home' : 'Volver al inicio'}</a>
       </header>
 
       <section className="consultoria-welcome section-consultoria" aria-labelledby="consultoria-welcome-title">
         <p className="consultoria-eyebrow">{isEnglish ? 'Your access is confirmed' : 'Tu acceso está confirmado'}</p>
         <h2 id="consultoria-welcome-title">¡FELICIDADES!<br /><em>ACABAS DE ADQUIRIRLO</em></h2>
-        <p>Ahora solo tienes que seguir los pasos que aparecen a continuación.</p>
+        <p>{isEnglish ? 'Now simply follow the steps below.' : 'Ahora solo tienes que seguir los pasos que aparecen a continuación.'}</p>
       </section>
 
       <section className="consultoria-hero section-consultoria">
         <div className="consultoria-hero-copy">
-          <p className="consultoria-eyebrow">Un encuentro · Un espacio · Tú</p>
-          <h1>CONSULTORÍA<br /><em>INDIVIDUAL</em></h1>
-          <p className="consultoria-lead">Conectemos de una manera más cercana y personal.</p>
-          <a className="consultoria-gold-button" href="#contacto">Quiero dar el primer paso <ArrowUpRight size={17} /></a>
+          <p className="consultoria-eyebrow">{isEnglish ? 'One meeting · One space · You' : 'Un encuentro · Un espacio · Tú'}</p>
+          <h1>{isEnglish ? <>INDIVIDUAL<br /><em>CONSULTING</em></> : <>CONSULTORÍA<br /><em>INDIVIDUAL</em></>}</h1>
+          <p className="consultoria-lead">{isEnglish ? 'Let us connect in a closer, more personal way.' : 'Conectemos de una manera más cercana y personal.'}</p>
+          <a className="consultoria-gold-button" href="#contacto">{isEnglish ? 'I want to take the first step' : 'Quiero dar el primer paso'} <ArrowUpRight size={17} /></a>
         </div>
         <div className="consultoria-portrait-wrap"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/df7bc775-d6cc-4886-b1fb-89a99d94cc7c-GtViUc1UkVmMHGxBWmjHKJpjCGt5wu.png" alt="Consultoría Individual en un espacio de conversación y orientación" /></div>
       </section>

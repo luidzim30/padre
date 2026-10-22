@@ -28,17 +28,17 @@ export default function AceleradorAbundanciaPage() {
       <header className="site-header abundance-header">
         <a className="brand" href="/" aria-label="Frecuencia Divina 7, inicio"><span className="brand-mark">✦</span><span>FRECUENCIA<br /><em>DIVINA 7</em></span></a>
         <nav className="abundance-nav" aria-label="Navegación principal">
-          <a href="/">La experiencia</a>
-          <a href="/ensenanzas-alto-control">Enseñanzas</a>
-          <a href="/consultoria-individual">Consultoría</a>
+          <a href={isEnglish ? '/?lang=en' : '/'}>{isEnglish ? 'The experience' : 'La experiencia'}</a>
+          <a href={isEnglish ? '/ensenanzas-alto-control?lang=en' : '/ensenanzas-alto-control'}>{isEnglish ? 'Teachings' : 'Enseñanzas'}</a>
+          <a href={isEnglish ? '/consultoria-individual?lang=en' : '/consultoria-individual'}>{isEnglish ? 'Consulting' : 'Consultoría'}</a>
         </nav>
         <a className="abundance-back" href={isEnglish ? '/?lang=en' : '/'}>{isEnglish ? 'Back to home' : 'Volver al inicio'} <ArrowRight size={15} /></a>
       </header>
 
       <section className="abundance-welcome" aria-label="Confirmación de adquisición">
-        <p className="abundance-welcome-kicker">¡FELICIDADES!</p>
-        <h2>Acabas de adquirir el Acelerador de Abundancia.</h2>
-        <p>Ahora solo tienes que seguir los pasos que aparecen a continuación.</p>
+        <p className="abundance-welcome-kicker">{isEnglish ? 'CONGRATULATIONS!' : '¡FELICIDADES!'}</p>
+        <h2>{isEnglish ? 'You have just acquired the Abundance Accelerator.' : 'Acabas de adquirir el Acelerador de Abundancia.'}</h2>
+        <p>{isEnglish ? 'Now simply follow the steps below.' : 'Ahora solo tienes que seguir los pasos que aparecen a continuación.'}</p>
       </section>
 
       <section className="abundance-hero">
@@ -46,8 +46,8 @@ export default function AceleradorAbundanciaPage() {
         <div className="abundance-hero-copy">
           <p className="eyebrow"><Sparkles size={13} /> {isEnglish ? 'Exclusive experience' : 'Experiencia exclusiva'}</p>
           <h1>ACELERADOR<br /><i>DE ABUNDANCIA</i></h1>
-          <p className="abundance-tagline">Despierta tu potencial y descubre nuevas posibilidades para tu vida.</p>
-          <p className="abundance-intro">Bienvenido al Acelerador de Abundancia, una experiencia creada para quienes desean desarrollar una mentalidad de crecimiento, explorar nuevas perspectivas y fortalecer su conexión con sus objetivos personales.</p>
+          <p className="abundance-tagline">{isEnglish ? 'Awaken your potential and discover new possibilities for your life.' : 'Despierta tu potencial y descubre nuevas posibilidades para tu vida.'}</p>
+          <p className="abundance-intro">{isEnglish ? 'Welcome to the Abundance Accelerator, an experience created for those who want to develop a growth mindset, explore new perspectives, and strengthen their connection with their personal goals.' : 'Bienvenido al Acelerador de Abundancia, una experiencia creada para quienes desean desarrollar una mentalidad de crecimiento, explorar nuevas perspectivas y fortalecer su conexión con sus objetivos personales.'}</p>
         </div>
         <div className="abundance-image-placeholder">
           <img src="/acelerador-abundancia.png" alt="Árbol dorado de abundancia sobre un libro abierto" />
