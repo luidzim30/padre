@@ -1,11 +1,14 @@
 'use client'
 
 import { useState } from 'react'
+import { useSearchParams } from 'next/navigation'
 import { ArrowLeft, ArrowUpRight, CalendarDays, Check, Copy, Mail, MessageCircle } from 'lucide-react'
 
 const email = 'frequenciadivina007@gmail.com'
 
 export default function ConsultoriaIndividualPage() {
+  const searchParams = useSearchParams()
+  const isEnglish = searchParams.get('lang') === 'en'
   const [copied, setCopied] = useState(false)
 
   async function copyEmail() {
@@ -18,11 +21,11 @@ export default function ConsultoriaIndividualPage() {
     <main className="consultoria-page">
       <header className="consultoria-header">
         <a className="consultoria-brand" href="/" aria-label="Volver al inicio"><span>✦</span><b>FRECUENCIA<br /><i>DIVINA 7</i></b></a>
-        <a className="back-home" href="/"><ArrowLeft size={15} /> Volver al inicio</a>
+        <a className="back-home" href="/"><ArrowLeft size={15} /> {isEnglish ? 'Back to home' : 'Volver al inicio'}</a>
       </header>
 
       <section className="consultoria-welcome section-consultoria" aria-labelledby="consultoria-welcome-title">
-        <p className="consultoria-eyebrow">Tu acceso está confirmado</p>
+        <p className="consultoria-eyebrow">{isEnglish ? 'Your access is confirmed' : 'Tu acceso está confirmado'}</p>
         <h2 id="consultoria-welcome-title">¡FELICIDADES!<br /><em>ACABAS DE ADQUIRIRLO</em></h2>
         <p>Ahora solo tienes que seguir los pasos que aparecen a continuación.</p>
       </section>

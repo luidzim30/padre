@@ -1,6 +1,7 @@
 'use client'
 
 import { FormEvent, useState } from 'react'
+import { useSearchParams } from 'next/navigation'
 import { ArrowRight, Check, Sparkles } from 'lucide-react'
 
 const discoveries = [
@@ -10,6 +11,8 @@ const discoveries = [
 ]
 
 export default function AceleradorAbundanciaPage() {
+  const searchParams = useSearchParams()
+  const isEnglish = searchParams.get('lang') === 'en'
   const [email, setEmail] = useState('')
   const [consent, setConsent] = useState(false)
   const [submitted, setSubmitted] = useState(false)
@@ -29,7 +32,7 @@ export default function AceleradorAbundanciaPage() {
           <a href="/ensenanzas-alto-control">Enseñanzas</a>
           <a href="/consultoria-individual">Consultoría</a>
         </nav>
-        <a className="abundance-back" href="/">Volver al inicio <ArrowRight size={15} /></a>
+        <a className="abundance-back" href={isEnglish ? '/?lang=en' : '/'}>{isEnglish ? 'Back to home' : 'Volver al inicio'} <ArrowRight size={15} /></a>
       </header>
 
       <section className="abundance-welcome" aria-label="Confirmación de adquisición">
@@ -41,7 +44,7 @@ export default function AceleradorAbundanciaPage() {
       <section className="abundance-hero">
         <div className="abundance-hero-glow" aria-hidden="true" />
         <div className="abundance-hero-copy">
-          <p className="eyebrow"><Sparkles size={13} /> Experiencia exclusiva</p>
+          <p className="eyebrow"><Sparkles size={13} /> {isEnglish ? 'Exclusive experience' : 'Experiencia exclusiva'}</p>
           <h1>ACELERADOR<br /><i>DE ABUNDANCIA</i></h1>
           <p className="abundance-tagline">Despierta tu potencial y descubre nuevas posibilidades para tu vida.</p>
           <p className="abundance-intro">Bienvenido al Acelerador de Abundancia, una experiencia creada para quienes desean desarrollar una mentalidad de crecimiento, explorar nuevas perspectivas y fortalecer su conexión con sus objetivos personales.</p>
