@@ -1,6 +1,6 @@
 'use client'
 
-import { FormEvent, useState } from 'react'
+import { FormEvent, Suspense, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { ArrowRight, Check, Sparkles } from 'lucide-react'
 
@@ -17,7 +17,7 @@ const discoveries = {
   ],
 }
 
-export default function AceleradorAbundanciaPage() {
+function AceleradorAbundanciaContent() {
   const searchParams = useSearchParams()
   const isEnglish = searchParams.get('lang') === 'en'
   const [email, setEmail] = useState('')
@@ -75,6 +75,14 @@ export default function AceleradorAbundanciaPage() {
         </div>
       </section>
     </main>
+  )
+}
+
+export default function AceleradorAbundanciaPage() {
+  return (
+    <Suspense fallback={<main className="abundance-page" aria-busy="true" />}> 
+      <AceleradorAbundanciaContent />
+    </Suspense>
   )
 }
 

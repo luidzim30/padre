@@ -1,6 +1,6 @@
 'use client'
 
-import { FormEvent, useState } from 'react'
+import { FormEvent, Suspense, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { ArrowRight, Check, LoaderCircle } from 'lucide-react'
 
@@ -17,7 +17,7 @@ const topics = {
   ],
 }
 
-export default function EnseñanzasAltoControlPage() {
+function EnseñanzasAltoControlContent() {
   const searchParams = useSearchParams()
   const isEnglish = searchParams.get('lang') === 'en'
   const [email, setEmail] = useState('')
@@ -81,3 +81,12 @@ export default function EnseñanzasAltoControlPage() {
     </main>
   )
 }
+
+export default function EnseñanzasAltoControlPage() {
+  return (
+    <Suspense fallback={<main className="control-page" aria-busy="true" />}>
+      <EnseñanzasAltoControlContent />
+    </Suspense>
+  )
+}
+
