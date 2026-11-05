@@ -18,7 +18,7 @@ type BookCoverProps = {
   placeholderLabel: string
 }
 
-const recipient = 'frquenciadivina007@gmail.com'
+const recipient = 'frequenciadivina007@gmail.com'
 const bookCoverSources: Record<Language, string> = {
   es: '/frecuencia-divina-cover.png',
   en: '/divine-frequency-cover.png',
