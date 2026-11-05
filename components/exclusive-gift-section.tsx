@@ -19,6 +19,10 @@ type BookCoverProps = {
 }
 
 const recipient = 'frquenciadivina007@gmail.com'
+const bookCoverSources: Record<Language, string> = {
+  es: '/frecuencia-divina-cover.png',
+  en: '/divine-frequency-cover.png',
+}
 
 const giftCopy = {
   es: {
@@ -47,8 +51,8 @@ const giftCopy = {
     requiredError: 'Completa este campo para continuar.',
     notProvided: 'No indicado',
     emailPrepared: 'Tu solicitud está preparada en un correo electrónico. Revisa los datos y pulsa Enviar para completar la solicitud.',
-    coverAlt: 'Espacio reservado para la portada del libro FRECUENCIA DIVINA',
-    coverPlaceholder: 'Espacio reservado para la portada del libro',
+    coverAlt: 'Portada del libro FRECUENCIA DIVINA con una ilustración de San Benito.',
+    coverPlaceholder: 'Portada de FRECUENCIA DIVINA',
     bodyTitle: 'Solicitud del libro FRECUENCIA DIVINA — 7 días de oración',
   },
   en: {
@@ -77,8 +81,8 @@ const giftCopy = {
     requiredError: 'Please complete this field.',
     notProvided: 'Not provided',
     emailPrepared: 'Your request is ready in an email. Review the details and click Send to complete your request.',
-    coverAlt: 'Reserved space for the DIVINE FREQUENCY book cover',
-    coverPlaceholder: 'Reserved space for the book cover',
+    coverAlt: 'DIVINE FREQUENCY book cover featuring an illustration of Saint Benedict.',
+    coverPlaceholder: 'DIVINE FREQUENCY book cover',
     bodyTitle: 'DIVINE FREQUENCY Book Request — 7 Days of Prayer',
   },
 } satisfies Record<Language, {
@@ -107,7 +111,7 @@ export function BookCover({ src, alt, placeholderLabel }: BookCoverProps) {
   return (
     <div className="gift-book-cover">
       {src ? (
-        <img src={src} alt={alt} />
+        <img src={src} alt={alt} loading="lazy" decoding="async" />
       ) : (
         <div className="gift-book-cover-placeholder" role="img" aria-label={alt}>
           <span>{placeholderLabel}</span>
@@ -178,7 +182,7 @@ export function ExclusiveGiftSection({ language, completedDays, totalDays, bookC
       </div>
 
       <div className="exclusive-gift-layout">
-        <BookCover src={bookCoverSrc} alt={copy.coverAlt} placeholderLabel={copy.coverPlaceholder} />
+        <BookCover src={bookCoverSrc ?? bookCoverSources[language]} alt={copy.coverAlt} placeholderLabel={copy.coverPlaceholder} />
         <div className="exclusive-gift-details">
           <p className="exclusive-gift-highlight">{copy.highlight}</p>
 
